@@ -13,23 +13,28 @@ for (int i = 0; i < massive.GetLength(0); i++)
 }
 Console.WriteLine();
 
-void BubbleSort(int[,] arr)
+void BubbleSort(int[,] Array)
       {
-	for (int i = 0; i < arr.GetLength(0); i++)
-		for (int j = 0; j < arr.GetLength(1) - 1; j++)
-			if (arr[i,j] > arr[i,j + 1])
-				{
-                              int max = arr[i,j];
-					arr[i,j] = arr[i,j+1];
-					arr[i,j+1] = max;
-                              Console.WriteLine(arr[i,j]);
-				}
-                  else
+            for (int i = 0; i < Array.GetLength(1); i++)
+            {
+                for (int j = 0; j < Array.GetLength(1) - 1; j++)
                   {
-                        j++;
+                    for (int k = 0; k < Array.GetLength(1)-1; k++)
+                    {
+                        if(Array[k,j]>Array[k,j+1])
+                        {
+                              int temp=Array[k,j+1];
+                              Array[k,j+1]=Array[k,j];
+                              Array[k,j]=temp;
+                              temp=0;
+                        }
+                    }
+                    
+                       
                   }
-	}
- 
+                }
+      }
+      
 BubbleSort(massive);
 
 for (int i = 0; i < massive.GetLength(0); i++)
