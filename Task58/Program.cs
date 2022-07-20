@@ -33,4 +33,3 @@ for (int i = 0; i < matrix3.GetLength(0); i++)
       }
       Console.WriteLine();
 }
-
