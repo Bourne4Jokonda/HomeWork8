@@ -12,7 +12,6 @@ for (int i = 0; i < massive.GetLength(0); i++)
       Console.WriteLine();
 }
 Console.WriteLine();
-
 void BubbleSort(int[,] Array)
       {
             for (int i = 0; i < Array.GetLength(1); i++)
